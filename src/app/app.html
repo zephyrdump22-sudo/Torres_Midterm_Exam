@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark mb-4">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/home">Weather Dashboard</a>
+    <a class="navbar-brand" [routerLink]="['/home']">Weather Dashboard</a>
     <div class="navbar-nav ms-auto">
-      <a class="nav-link text-white" href="/home">Home</a>
-      <a class="nav-link text-white" href="/saved">Saved Cities</a>
+      <a class="nav-link text-white" [routerLink]="['/home']" routerLinkActive="active">Home</a>
+      <a class="nav-link text-white" [routerLink]="['/saved']" routerLinkActive="active">Saved Cities</a>
     </div>
   </div>
 </nav>
