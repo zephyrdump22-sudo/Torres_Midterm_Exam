@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Saved Cities</h5>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>City</th>
+          <th>Temperature (°C)</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let city of cities">
+          <td>{{ city.name }}</td>
+          <td>{{ city.temperature }}</td>
+          <td>
+            <button class="btn btn-danger btn-sm" (click)="removeCity(city.name)">Remove</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div *ngIf="cities.length === 0" class="text-muted">
+      No cities saved.
+    </div>
+  </div>
+</div>
